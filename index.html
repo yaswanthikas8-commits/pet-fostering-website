@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Paws & Hearts — Find your perfect pet companion. Browse adorable dogs, cats and more waiting for a loving forever home. Start your adoption journey today.">
+  <title>Paws & Hearts | Pet Adoption & Fostering</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+</head>
+<body>
+
+  <!-- ══ Navbar ══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="nav-logo-icon">🐾</span>
+        Paws &amp; Hearts
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/pets">Our Pets</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/adopt" class="nav-cta">Adopt Now</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ Hero ══ -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="badge badge-primary">🏡 Loving Homes for Every Pet</span>
+        <h1 class="hero-title">
+          Find Your <span>Perfect</span><br>Furry Companion
+        </h1>
+        <p class="hero-description">
+          Every pet deserves a loving home. Browse our adorable animals waiting for a family just like yours.
+          Give them a second chance at happiness — adopt today.
+        </p>
+        <div class="hero-buttons">
+          <a href="/pets" class="btn btn-primary">🐾 Meet Our Pets</a>
+          <a href="/adopt" class="btn btn-secondary">📋 Start Adoption</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Pets Adopted</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">350+</div>
+            <div class="stat-label">Happy Families</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Years Active</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image fade-in-right">
+        <img class="hero-image-main"
+             src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=620&h=465&fit=crop"
+             alt="Happy dog and cat together"
+             onerror="this.src='https://picsum.photos/seed/petsHero/620/465'">
+        <div class="hero-image-badge">
+          <span class="badge-icon">❤️</span>
+          <div class="badge-text">
+            <strong>Ready to Adopt</strong>
+            <span>8 pets waiting for you</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Stats Bar ══ -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stats-card fade-in">
+          <div class="icon">🐕</div>
+          <div class="count" data-target="342" data-suffix="+">0+</div>
+          <div class="label">Dogs Rehomed</div>
+        </div>
+        <div class="stats-card fade-in">
+          <div class="icon">🐱</div>
+          <div class="count" data-target="218" data-suffix="+">0+</div>
+          <div class="label">Cats Adopted</div>
+        </div>
+        <div class="stats-card fade-in">
+          <div class="icon">👨‍👩‍👧‍👦</div>
+          <div class="count" data-target="560" data-suffix="+">0+</div>
+          <div class="label">Happy Families</div>
+        </div>
+        <div class="stats-card fade-in">
+          <div class="icon">⭐</div>
+          <div class="count" data-target="98" data-suffix="%">0%</div>
+          <div class="label">Satisfaction Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Featured Pets ══ -->
+  <section class="section-padding" style="background: var(--bg);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-primary fade-in">🐾 Available Now</span>
+        <h2 class="section-title fade-in">Meet Our Adorable Pets</h2>
+        <p class="section-subtitle fade-in">These loving animals are waiting for their forever home. Could you be the one?</p>
+      </div>
+      <div class="pets-grid" id="featured-pets-container">
+        <!-- Loaded dynamically via JS -->
+      </div>
+      <div style="text-align:center; margin-top: 3rem;" class="fade-in">
+        <a href="/pets" class="btn btn-primary">View All Pets &nbsp;🐾</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ How It Works ══ -->
+  <section class="section-padding" style="background: var(--bg-section);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-secondary fade-in">📋 Simple Process</span>
+        <h2 class="section-title fade-in">How Adoption Works</h2>
+        <p class="section-subtitle fade-in">We've made the adoption process simple, transparent, and joyful for you and your new companion.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step fade-in">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Browse Pets</h3>
+          <p class="step-desc">Explore our gallery of available pets and find the one that captures your heart.</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Apply Online</h3>
+          <p class="step-desc">Fill out our simple adoption form with your details and lifestyle information.</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Meet Your Match</h3>
+          <p class="step-desc">We'll review your application and schedule a meet-and-greet with your chosen pet.</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Welcome Home!</h3>
+          <p class="step-desc">Once approved, take your new best friend home and start your adventure together!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Testimonials ══ -->
+  <section class="section-padding" style="background: var(--bg);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-primary fade-in">💬 Success Stories</span>
+        <h2 class="section-title fade-in">Happy Families</h2>
+        <p class="section-subtitle fade-in">Don't just take our word for it — hear from families who found their perfect match.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"We adopted Max from Paws &amp; Hearts three years ago and he's completely changed our lives. The team was so supportive throughout the entire process!"</p>
+          <div class="testimonial-author">
+            <img src="https://picsum.photos/seed/testimonial1/46/46" alt="Sarah M." onerror="this.style.display='none'">
+            <div>
+              <div class="testimonial-author-name">Sarah M.</div>
+              <div class="testimonial-author-pet">Adopted Max — Golden Retriever</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Luna is the most affectionate cat I've ever had. Paws &amp; Hearts made the whole experience seamless. I couldn't imagine life without her!"</p>
+          <div class="testimonial-author">
+            <img src="https://picsum.photos/seed/testimonial2/46/46" alt="James K." onerror="this.style.display='none'">
+            <div>
+              <div class="testimonial-author-name">James K.</div>
+              <div class="testimonial-author-pet">Adopted Luna — Siamese Mix</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"The staff matched us with the perfect puppy for our family. The whole adoption process was transparent, warm, and absolutely wonderful."</p>
+          <div class="testimonial-author">
+            <img src="https://picsum.photos/seed/testimonial3/46/46" alt="Priya R." onerror="this.style.display='none'">
+            <div>
+              <div class="testimonial-author-name">Priya R.</div>
+              <div class="testimonial-author-pet">Adopted Charlie — Corgi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <section class="cta-section">
+    <div class="container" style="position:relative;z-index:1;">
+      <h2 class="fade-in">Every Pet Deserves a<br>Loving Forever Home</h2>
+      <p class="fade-in">Join our community of loving pet owners. Your perfect companion is waiting.</p>
+      <div class="cta-buttons fade-in">
+        <a href="/pets" class="btn btn-white">Meet Our Pets 🐕</a>
+        <a href="/adopt" class="btn" style="background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.4);">Apply to Adopt 📋</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Footer ══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><span class="nav-logo-icon">🐾</span>Paws &amp; Hearts</a>
+          <p>Connecting loving families with pets in need since 2016. Every adoption changes two lives — the pet's and yours.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pets">Our Pets</a></li>
+            <li><a href="/adopt">Adopt</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Pets Available</h4>
+          <ul>
+            <li><a href="/pets">All Pets</a></li>
+            <li><a href="/pets">Dogs</a></li>
+            <li><a href="/pets">Cats</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+            <li><a href="mailto:hello@pawsandhearts.in">✉️ hello@pawsandhearts.in</a></li>
+            <li><a href="/contact">📍 Mumbai, India</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Paws &amp; Hearts. Made with ❤️ for animals.</p>
+        <p>All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✅</span>
+    <div class="toast-message"><strong></strong><span></span></div>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

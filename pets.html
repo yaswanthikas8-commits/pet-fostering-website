@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse all available pets for adoption at Paws & Hearts. Find dogs, cats and more looking for their forever homes. Filter by species, size, and age.">
+  <title>Our Pets | Paws &amp; Hearts</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="nav-logo-icon">🐾</span>
+        Paws &amp; Hearts
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/pets" class="active">Our Pets</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/adopt" class="nav-cta">Adopt Now</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-primary fade-in">🐾 Find Your Match</span>
+      <h1 class="page-hero-title fade-in">Meet Our <span style="color:var(--primary)">Adorable</span> Pets</h1>
+      <p class="page-hero-subtitle fade-in">Every one of them has a story. Can you help write the next chapter?</p>
+    </div>
+  </section>
+
+  <!-- Pets Section -->
+  <section class="section-padding">
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="filter-bar fade-in">
+        <label>🔍 Filter:</label>
+        <select class="filter-select" id="filter-species" aria-label="Filter by species">
+          <option value="">All Species</option>
+          <option value="Dog">🐕 Dogs</option>
+          <option value="Cat">🐱 Cats</option>
+        </select>
+        <select class="filter-select" id="filter-size" aria-label="Filter by size">
+          <option value="">All Sizes</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+        </select>
+        <select class="filter-select" id="filter-age" aria-label="Filter by age">
+          <option value="">All Ages</option>
+          <option value="young">Young (under 1 yr)</option>
+          <option value="adult">Adult (1–5 yrs)</option>
+          <option value="senior">Senior (5+ yrs)</option>
+        </select>
+        <input type="text" class="filter-search" id="filter-search"
+               placeholder="Search by name or breed..." aria-label="Search pets">
+        <button class="btn btn-secondary" id="clear-filters" style="white-space:nowrap;">✕ Clear</button>
+      </div>
+
+      <p class="fade-in" style="color:var(--text-muted);margin-bottom:1.5rem;font-weight:600;">
+        Showing <span id="pets-count">...</span> pets available for adoption
+      </p>
+
+      <!-- Pets Grid — loaded by JS -->
+      <div class="pets-grid" id="pets-container"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container" style="position:relative;z-index:1;">
+      <h2 class="fade-in">Not Sure Which Pet is Right?</h2>
+      <p class="fade-in">Our team is here to help you find the perfect match for your lifestyle and home.</p>
+      <div class="cta-buttons fade-in">
+        <a href="/contact" class="btn btn-white">📞 Talk to Us</a>
+        <a href="/adopt" class="btn" style="background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.4);">📋 Apply to Adopt</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><span class="nav-logo-icon">🐾</span>Paws &amp; Hearts</a>
+          <p>Connecting loving families with pets in need since 2016.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">📘</a>
+            <a href="#" class="social-link">📸</a>
+            <a href="#" class="social-link">🐦</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pets">Our Pets</a></li>
+            <li><a href="/adopt">Adopt</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Browse Pets</h4>
+          <ul>
+            <li><a href="/pets">All Pets</a></li>
+            <li><a href="/pets">Dogs</a></li>
+            <li><a href="/pets">Cats</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+            <li><a href="mailto:hello@pawsandhearts.in">✉️ hello@pawsandhearts.in</a></li>
+            <li><a href="/contact">📍 Mumbai, India</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Paws &amp; Hearts. Made with ❤️ for animals.</p>
+        <p>All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">
+    <span class="toast-icon">✅</span>
+    <div class="toast-message"><strong></strong><span></span></div>
+  </div>
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+  <script src="/js/main.js"></script>
+</body>
+</html>
